@@ -1,0 +1,276 @@
+/* ============================================================
+   BeanRoute — Design Tokens
+   Palette:
+     --coffee-950  #2A1810  deep roasted bean (text, dark surfaces)
+     --coffee-700  #5C3A28  espresso brown (secondary text, borders)
+     --parchment   #F1E6D6  warm paper background
+     --parchment-2 #E7D8C2  slightly deeper paper (cards, sections)
+     --amber       #C08A3E  roast/gold accent (primary CTA, stamps)
+     --leaf        #47563E  coffee-cherry leaf green (route lines, tags)
+     --stamp-red   #A63D33  passport-stamp red (used sparingly)
+   Type:
+     Display (Latin wordmark only): 'Fraunces' — characterful serif
+     Body / UI (Arabic + Latin): 'Cairo'
+   ============================================================ */
+
+:root {
+  --coffee-950: #2A1810;
+  --coffee-700: #5C3A28;
+  --parchment: #F1E6D6;
+  --parchment-2: #E7D8C2;
+  --amber: #C08A3E;
+  --amber-dark: #9C6D2E;
+  --leaf: #47563E;
+  --stamp-red: #A63D33;
+  --cream-line: rgba(42, 24, 16, 0.14);
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Cairo', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--parchment);
+  color: var(--coffee-950);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(42,24,16,0.06) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+a { text-decoration: none; color: inherit; }
+
+::selection { background: var(--amber); color: var(--parchment); }
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* -------- Route dotted line, the signature motif -------- */
+.route-line {
+  position: relative;
+  height: 2px;
+  background-image: linear-gradient(to right, var(--coffee-700) 55%, transparent 0%);
+  background-position: bottom;
+  background-size: 14px 2px;
+  background-repeat: repeat-x;
+  margin: 0 8px;
+  flex: 1;
+}
+
+.route-line--vertical {
+  width: 2px;
+  height: 100%;
+  background-image: linear-gradient(to bottom, var(--coffee-700) 55%, transparent 0%);
+  background-size: 2px 14px;
+  background-repeat: repeat-y;
+}
+
+.route-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--amber);
+  border: 2px solid var(--coffee-950);
+  flex-shrink: 0;
+}
+
+/* -------- Passport stamp badge -------- */
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  border: 2px dashed var(--stamp-red);
+  color: var(--stamp-red);
+  transform: rotate(-8deg);
+  font-family: var(--font-display);
+  text-align: center;
+  padding: 6px;
+  line-height: 1.15;
+  background: rgba(166, 61, 51, 0.04);
+}
+
+.stamp small {
+  font-family: var(--font-body);
+  font-size: 0.55rem;
+  letter-spacing: 0.06em;
+}
+
+/* -------- Buttons -------- */
+.btn-brew {
+  background: var(--coffee-950);
+  color: var(--parchment) !important;
+  border: none;
+  border-radius: 3px;
+  padding: 0.65rem 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: transform .15s ease, background .2s ease;
+}
+.btn-brew:hover { background: var(--amber-dark); transform: translateY(-1px); color: var(--parchment); }
+
+.btn-brew-outline {
+  background: transparent;
+  border: 1.5px solid var(--coffee-950);
+  color: var(--coffee-950) !important;
+  border-radius: 3px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  transition: all .15s ease;
+}
+.btn-brew-outline:hover { background: var(--coffee-950); color: var(--parchment) !important; }
+
+/* -------- Nav -------- */
+.nav-beanroute {
+  background: var(--parchment);
+  border-bottom: 1px solid var(--cream-line);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(6px);
+}
+.nav-link-custom {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--coffee-700);
+  padding: 0.4rem 0.9rem;
+  border-radius: 3px;
+  transition: color .15s ease;
+}
+.nav-link-custom:hover, .nav-link-custom.active { color: var(--coffee-950); }
+
+/* -------- Cards -------- */
+.origin-card {
+  background: var(--parchment-2);
+  border: 1px solid var(--cream-line);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.origin-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px -14px rgba(42,24,16,0.35);
+}
+.origin-card .card-img-wrap {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.origin-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.origin-card:hover img { transform: scale(1.06); }
+
+.tag-pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.22rem 0.6rem;
+  border-radius: 20px;
+  background: var(--leaf);
+  color: var(--parchment);
+}
+.tag-pill--amber { background: var(--amber); }
+.tag-pill--outline { background: transparent; border: 1px solid var(--coffee-700); color: var(--coffee-700); }
+
+/* -------- Hero -------- */
+.hero-beanroute {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--parchment) 0%, var(--parchment-2) 100%);
+  border-bottom: 1px solid var(--cream-line);
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+}
+.hero-eyebrow {
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--stamp-red);
+}
+
+/* -------- Section headings -------- */
+.section-eyebrow {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--leaf);
+}
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+/* -------- Footer -------- */
+.footer-beanroute {
+  background: var(--coffee-950);
+  color: var(--parchment);
+}
+.footer-beanroute a { color: var(--parchment-2); }
+.footer-beanroute a:hover { color: var(--amber); }
+
+/* -------- Map -------- */
+.map-wrap {
+  border: 1px solid var(--cream-line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.leaflet-container {
+  background: var(--parchment-2) !important;
+}
+
+/* -------- Cart -------- */
+.cart-row {
+  border-bottom: 1px solid var(--cream-line);
+}
+.qty-box {
+  width: 40px;
+  text-align: center;
+  border: 1px solid var(--cream-line);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--coffee-950);
+}
+
+/* -------- Form fields on parchment -------- */
+.form-control-beanroute {
+  background: var(--parchment) !important;
+  border: 1px solid var(--cream-line) !important;
+  color: var(--coffee-950) !important;
+  border-radius: 3px;
+}
+.form-control-beanroute:focus {
+  border-color: var(--amber) !important;
+  box-shadow: 0 0 0 3px rgba(192,138,62,0.25) !important;
+}
+.form-control-beanroute::placeholder { color: var(--coffee-700); opacity: 0.6; }
+
+/* Accessible focus ring everywhere */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+@media (max-width: 767px) {
+  .stamp { width: 76px; height: 76px; }
+}

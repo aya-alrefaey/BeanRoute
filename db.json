@@ -1,0 +1,478 @@
+{
+  "users": [
+    {
+      "id": "admin-seed-1",
+      "name": "مدير BeanRoute",
+      "email": "admin@beanroute.com",
+      "password": "admin123",
+      "phone": "",
+      "address": "",
+      "city": "",
+      "role": "admin",
+      "shopName": "",
+      "restricted": false,
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "emailConfirmed": true
+    },
+    {
+      "name": "Doha Harby",
+      "email": "dohaharby8@gmail.com",
+      "password": "ASDasd@2026",
+      "phone": "01111111111",
+      "address": "",
+      "city": "",
+      "role": "seller",
+      "shopName": "اطحن",
+      "restricted": false,
+      "createdAt": "2026-08-19T13:31:48.890Z",
+      "id": "bTuoxti42qw",
+      "emailConfirmed": false
+    },
+    {
+      "name": "cus",
+      "email": "cus@gmail.com",
+      "password": "123456",
+      "phone": "01111111111",
+      "address": "",
+      "city": "",
+      "role": "customer",
+      "shopName": "",
+      "restricted": false,
+      "createdAt": "2026-08-31T18:06:21.314Z",
+      "id": "qJNpHXn3BUE",
+      "emailConfirmed": false
+    },
+    {
+      "name": "Aya Al-Azab",
+      "email": "ayaalazab164@gmail.com",
+      "password": "aya12345",
+      "phone": "01000000000",
+      "address": "",
+      "city": "",
+      "role": "customer",
+      "shopName": "",
+      "restricted": false,
+      "emailConfirmed": true,
+      "createdAt": "2026-08-31T22:27:41.047Z",
+      "id": "43EmQ7PKJVE"
+    }
+  ],
+  "orders": [
+    {
+      "userId": "bTuoxti42qw",
+      "customer": {
+        "name": "Doha Harby",
+        "phone": "01111111111",
+        "email": "dohaharby8@gmail.com",
+        "address": ";lkjh",
+        "city": "nlnl"
+      },
+      "items": [
+        {
+          "id": "yirgacheffe",
+          "name": "يرغاتشيف",
+          "qty": 1,
+          "price": 320,
+          "productId": "yirgacheffe",
+          "sellerId": null
+        }
+      ],
+      "payment": "wallet",
+      "paymentDetails": null,
+      "subtotal": 320,
+      "shipping": 40,
+      "total": 360,
+      "status": "قيد المعالجة",
+      "createdAt": "2026-08-19T13:42:25.104Z",
+      "id": "C8c8yPaZO4A",
+      "discount": 0,
+      "promoCode": null,
+      "paymentStatus": "Paid (Simulation)",
+      "statusHistory": [
+        {
+          "status": "قيد المعالجة",
+          "at": "2026-08-19T13:42:25.104Z"
+        }
+      ]
+    },
+    {
+      "userId": "43EmQ7PKJVE",
+      "customer": {
+        "name": "Aya Al-Azab",
+        "phone": "01000000000",
+        "email": "ayaalazab164@gmail.com",
+        "address": "sadat city",
+        "city": "sadat city"
+      },
+      "items": [
+        {
+          "id": "huila",
+          "productId": "huila",
+          "sellerId": null,
+          "name": "هويلا",
+          "qty": 1,
+          "price": 290
+        }
+      ],
+      "payment": "cod",
+      "paymentStatus": "Pending",
+      "paymentDetails": null,
+      "subtotal": 290,
+      "discount": 29,
+      "promoCode": "WELCOME10",
+      "shipping": 40,
+      "total": 301,
+      "status": "تم التوصيل",
+      "statusHistory": [
+        {
+          "status": "قيد المعالجة",
+          "at": "2026-08-31T22:28:37.263Z"
+        },
+        {
+          "status": "تم التوصيل",
+          "at": "2026-08-31T22:34:12.444Z"
+        }
+      ],
+      "createdAt": "2026-08-31T22:28:37.263Z",
+      "id": "LpwMouRz-T8"
+    },
+    {
+      "userId": "43EmQ7PKJVE",
+      "customer": {
+        "name": "Aya Al-Azab",
+        "phone": "01000000000",
+        "email": "ayaalazab164@gmail.com",
+        "address": "er4ykuj",
+        "city": "tyj5eyr"
+      },
+      "items": [
+        {
+          "id": "huila",
+          "productId": "huila",
+          "sellerId": null,
+          "name": "هويلا",
+          "qty": 1,
+          "price": 290
+        }
+      ],
+      "payment": "card",
+      "paymentStatus": "Paid (Simulation)",
+      "paymentDetails": {
+        "last4": "4242",
+        "cardHolder": "aya"
+      },
+      "subtotal": 290,
+      "discount": 0,
+      "promoCode": null,
+      "shipping": 40,
+      "total": 330,
+      "status": "قيد المعالجة",
+      "statusHistory": [
+        {
+          "status": "قيد المعالجة",
+          "at": "2026-08-31T22:37:19.426Z"
+        }
+      ],
+      "createdAt": "2026-08-31T22:37:19.427Z",
+      "id": "FLEvT_WZOq0"
+    }
+  ],
+  "reviews": [],
+  "banners": [
+    {
+      "id": "home-hero",
+      "title": "كل كيس بن... رحلة لها اسم ووجهة",
+      "subtitle": "في BeanRoute بنجيب البن من مزارع بعينها ونوريك خريطة رحلته الحقيقية",
+      "active": true
+    }
+  ],
+  "sellerProducts": [
+    {
+      "sellerId": "bTuoxti42qw",
+      "sellerShop": "اطحن",
+      "name": "يخاش",
+      "country": "مصر",
+      "price": 300,
+      "unit": "250 جم",
+      "stock": 20,
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop",
+      "description": "شسيبلا",
+      "createdAt": "2026-08-19T13:33:23.870Z",
+      "id": "VxSxfhX9hpY"
+    }
+  ],
+  "categories": [
+    {
+      "id": "arabica",
+      "name": "Arabica",
+      "description": "حبوب أرابيكا مختارة من مناشئ مختلفة",
+      "active": true
+    },
+    {
+      "id": "specialty",
+      "name": "Specialty Coffee",
+      "description": "بن مختص بدفعات ومنشآت مميزة",
+      "active": true
+    },
+    {
+      "id": "dark-roast",
+      "name": "Dark Roast",
+      "description": "تحميص غامق لمحبي النكهات القوية",
+      "active": true
+    }
+  ],
+  "products": [
+    {
+      "id": "yirgacheffe",
+      "name": "يرغاتشيف",
+      "country": "إثيوبيا",
+      "farm": "مزرعة كوتشيري، منطقة يرغاتشيف",
+      "coords": [
+        6.1611,
+        38.2058
+      ],
+      "altitude": "1900–2200م",
+      "process": "مغسول (Washed)",
+      "roast": "تحميص فاتح",
+      "notes": [
+        "ياسمين",
+        "برغموت",
+        "شاي أسود",
+        "ليمون"
+      ],
+      "price": 320,
+      "unit": "250 جم",
+      "image": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1200&auto=format&fit=crop",
+      "story": "بتتحصد الحبوب يدويًا من أشجار بن بتنمو في ظل أشجار الموز على ارتفاعات عالية في جنوب إثيوبيا، مهد البن الأصلي.",
+      "roaster": "اتحمصت في محمصة BeanRoute بالقاهرة، دفعة أسبوعية",
+      "categoryId": "arabica",
+      "stock": 25,
+      "sellerId": null,
+      "active": true
+    },
+    {
+      "id": "huila",
+      "name": "هويلا",
+      "country": "كولومبيا",
+      "farm": "مزرعة لا إسبيرانزا، هويلا",
+      "coords": [
+        2.5359,
+        -75.5277
+      ],
+      "altitude": "1700–1900م",
+      "process": "مغسول (Washed)",
+      "roast": "تحميص متوسط",
+      "notes": [
+        "كراميل",
+        "تفاح أحمر",
+        "شوكولاتة لبن",
+        "برتقال"
+      ],
+      "price": 290,
+      "unit": "250 جم",
+      "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1200&auto=format&fit=crop",
+      "story": "عيلة كولومبية بتزرع البن من ثلاث أجيال في تلال الأنديز.",
+      "roaster": "اتحمصت في محمصة BeanRoute بالقاهرة، دفعة أسبوعية",
+      "categoryId": "arabica",
+      "stock": 16,
+      "sellerId": null,
+      "active": true
+    },
+    {
+      "id": "antigua",
+      "name": "أنتيغوا",
+      "country": "جواتيمالا",
+      "farm": "مزرعة إل إنخيرتو، أنتيغوا",
+      "coords": [
+        14.5586,
+        -90.7295
+      ],
+      "altitude": "1500–1700م",
+      "process": "مغسول (Washed)",
+      "roast": "تحميص متوسط",
+      "notes": [
+        "كاكاو",
+        "مكسرات محمصة",
+        "تين",
+        "دخان خفيف"
+      ],
+      "price": 305,
+      "unit": "250 جم",
+      "image": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=1200&auto=format&fit=crop",
+      "story": "التربة البركانية حوالين بركان فويغو النشط بتديّ البن قوام تقيل ونكهة مدخنة مميزة.",
+      "roaster": "اتحمصت في محمصة BeanRoute بالقاهرة، دفعة أسبوعية",
+      "categoryId": "arabica",
+      "stock": 14,
+      "sellerId": null,
+      "active": true
+    },
+    {
+      "id": "cerrado",
+      "name": "سيرادو",
+      "country": "البرازيل",
+      "farm": "مزرعة فازيندا سانتا إينيس، سيرادو",
+      "coords": [
+        -18.5,
+        -47.5
+      ],
+      "altitude": "900–1100م",
+      "process": "طبيعي (Natural)",
+      "roast": "تحميص غامق",
+      "notes": [
+        "بندق",
+        "كراميل محروق",
+        "شوكولاتة داكنة"
+      ],
+      "price": 260,
+      "unit": "250 جم",
+      "image": "https://images.unsplash.com/photo-1524350876685-274059332603?q=80&w=1200&auto=format&fit=crop",
+      "story": "من أكبر هضاب زراعة البن في العالم، فين المناخ الجاف بيسمح بتجفيف الكرزة كاملة على الشجرة قبل الحصاد الآلي.",
+      "roaster": "اتحمصت في محمصة BeanRoute بالقاهرة، دفعة أسبوعية",
+      "categoryId": "specialty",
+      "stock": 22,
+      "sellerId": null,
+      "active": true
+    },
+    {
+      "id": "haraaz",
+      "name": "حراز",
+      "country": "اليمن",
+      "farm": "مدرجات جبل حراز",
+      "coords": [
+        15.1,
+        43.5
+      ],
+      "altitude": "2000–2400م",
+      "process": "طبيعي (Natural)",
+      "roast": "تحميص متوسط إلى غامق",
+      "notes": [
+        "تمر",
+        "توابل",
+        "زبيب",
+        "شوكولاتة"
+      ],
+      "price": 380,
+      "unit": "250 جم",
+      "image": "https://images.unsplash.com/photo-1587734195503-904fca47e0b9?q=80&w=1200&auto=format&fit=crop",
+      "story": "بيتزرع على مدرجات جبلية قديمة عمرها مئات السنين، بمياه أمطار موسمية بس من غير ري صناعي.",
+      "roaster": "اتحمصت في محمصة BeanRoute بالقاهرة، دفعة محدودة",
+      "categoryId": "specialty",
+      "stock": 9,
+      "sellerId": null,
+      "active": true,
+      "description": "بيتزرع على مدرجات جبلية قديمة عمرها مئات السنين، بمياه أمطار موسمية بس من غير ري صناعي."
+    },
+    {
+      "id": "nyeri",
+      "name": "نييري",
+      "country": "كينيا",
+      "farm": "تعاونية تيغانيا، نييري",
+      "coords": [
+        -0.4201,
+        36.9476
+      ],
+      "altitude": "1700–1900م",
+      "process": "مغسول (Washed)",
+      "roast": "تحميص فاتح إلى متوسط",
+      "notes": [
+        "كشمش أسود",
+        "طماطم مجففة",
+        "حموضة نبيذية"
+      ],
+      "price": 340,
+      "unit": "250 جم",
+      "image": "https://images.unsplash.com/photo-1512568400610-62da28bc8a13?q=80&w=1200&auto=format&fit=crop",
+      "story": "تعاونية بتضم أكتر من 800 مزارع صغير، كل واحد بيسلّم كرزة البن لمحطة غسيل مركزية.",
+      "roaster": "اتحمصت في محمصة BeanRoute بالقاهرة، دفعة أسبوعية",
+      "categoryId": "specialty",
+      "stock": 16,
+      "sellerId": null,
+      "active": true
+    },
+    {
+      "id": "VxSxfhX9hpY",
+      "name": "يخاش",
+      "country": "مصر",
+      "farm": "اطحن",
+      "coords": null,
+      "altitude": "",
+      "process": "",
+      "roast": "",
+      "notes": [],
+      "price": 300,
+      "unit": "250 جم",
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop",
+      "story": "شسيبلا",
+      "roaster": "اطحن",
+      "categoryId": "specialty",
+      "stock": 20,
+      "sellerId": "bTuoxti42qw",
+      "sellerShop": "اطحن",
+      "active": true,
+      "createdAt": "2026-08-19T13:33:23.870Z"
+    },
+    {
+      "name": "coffe",
+      "country": "lwv",
+      "price": 400,
+      "unit": "250 جم",
+      "stock": 2,
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop",
+      "description": "5نمفة35خغته3ك5",
+      "categoryId": "arabica",
+      "roast": "وسط",
+      "notes": [
+        "بندق",
+        "لوز"
+      ],
+      "active": true,
+      "id": "BO92pcuc2b8"
+    }
+  ],
+  "carts": [
+    {
+      "userId": "43EmQ7PKJVE",
+      "items": [],
+      "id": "4lk04zZSko4"
+    }
+  ],
+  "promoCodes": [
+    {
+      "id": "welcome10",
+      "code": "WELCOME10",
+      "type": "percentage",
+      "value": 10,
+      "minOrder": 200,
+      "maximumDiscount": 100,
+      "usageLimit": 100,
+      "usedCount": 1,
+      "active": true,
+      "endDate": null
+    }
+  ],
+  "notifications": [
+    {
+      "userId": "43EmQ7PKJVE",
+      "email": "ayaalazab164@gmail.com",
+      "type": "status",
+      "title": "تحديث حالة الطلب",
+      "message": "طلبك #uRz-T8 أصبح: تم التوصيل",
+      "read": false,
+      "createdAt": "2026-08-31T22:34:12.465Z",
+      "id": "jl3NtzGr5WU"
+    },
+    {
+      "userId": "43EmQ7PKJVE",
+      "email": "ayaalazab164@gmail.com",
+      "type": "order",
+      "title": "تأكيد الطلب",
+      "message": "تم تأكيد طلبك #_WZOq0 بقيمة 330 ج.م",
+      "read": false,
+      "createdAt": "2026-08-31T22:37:19.447Z",
+      "id": "-X205EQbC_0"
+    }
+  ],
+  "savedCards": [],
+  "payouts": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

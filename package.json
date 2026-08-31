@@ -1,0 +1,28 @@
+{
+  "name": "beanroute",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "api": "json-server db.json --port 3001",
+    "dev:all": "concurrently -n FRONTEND,API -c blue,yellow \"npm run dev\" \"npm run api\"",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "leaflet": "^1.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
+    "react-router-dom": "^6.26.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^10.0.5",
+    "json-server": "^1.0.0-beta.15",
+    "vite": "^5.4.0"
+  }
+}

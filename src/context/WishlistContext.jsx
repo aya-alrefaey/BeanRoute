@@ -1,0 +1,4 @@
+import React,{createContext,useContext,useEffect,useState} from 'react';import {useAuth} from './AuthContext.jsx'
+const WishlistContext=createContext(null);const base='beanroute_wishlist'
+export function WishlistProvider({children}){const{user}=useAuth();const[ids,setIds]=useState([]);const key=user?`${base}_${user.id}`:`${base}_guest`;useEffect(()=>{try{setIds(JSON.parse(localStorage.getItem(key)||'[]'))}catch{setIds([])}},[key]);const persist=n=>{setIds(n);localStorage.setItem(key,JSON.stringify(n))};const toggleWishlist=id=>persist(ids.includes(id)?ids.filter(x=>x!==id):[...ids,id]);return <WishlistContext.Provider value={{ids,isWishlisted:id=>ids.includes(id),toggleWishlist,removeFromWishlist:id=>persist(ids.filter(x=>x!==id))}}>{children}</WishlistContext.Provider>}
+export const useWishlist=()=>useContext(WishlistContext)
