@@ -68,7 +68,7 @@ export default function ProductDetail() {
           <p className="mb-4" style={{ color: 'var(--coffee-700)' }}>{product.farm}</p>
 
           <div className="d-flex flex-wrap gap-2 mb-4">
-            {product.notes.map((n) => (
+            {(product.notes || []).map((n) => (
               <span key={n} className="tag-pill tag-pill--outline">{n}</span>
             ))}
           </div>
@@ -132,7 +132,7 @@ export default function ProductDetail() {
               <small>المنشأ</small>
             </div>
             <div className="stamp" style={{ transform: 'rotate(6deg)' }}>
-              <span className="fw-bold small">{product.process.split(' ')[0]}</span>
+              <span className="fw-bold small">{(product.process || 'Washed').split(' ')[0]}</span>
               <small>المعالجة</small>
             </div>
           </div>
